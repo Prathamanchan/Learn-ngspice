@@ -1,0 +1,15 @@
+VTC Characteristics of CMOS
+vdd 3 0 dc 5v
+vin 2 0 dc 0v
+M1 1 2 3 3 pmod w=100u l=1u
+M2 1 2 0 0 nmod w=40u l=1u
+
+.model pmod pmos vto=-1v kp=80u
+.model nmod nmos vt0=1v kp=200u
+
+.dc vin 0 5 0.1
+.control
+run
+plot v(1)
+.endc
+.end
