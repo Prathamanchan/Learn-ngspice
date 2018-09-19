@@ -1,0 +1,16 @@
+nor sizing
+vdd 1 0 dc 5
+va 3 0 pulse 0 5 1ns 1ns 1ns 10ns 20ns
+vb 4 0 pulse 0 5 1ns 1ns 1ns 10ns 20ns
+mn1 2 3 0 0 nmod w=20u l=10u
+mn2 2 4 0 0 nmod w=20u l=10u
+mp1 2 4 5 1 pmod w=40u l=1u
+mp2 5 3 1 1 pmod w=40u l=1u
+.model nmod nmos vto=1v kp=20u
+.model pmod pmos vto=-1v kp=20u
+.tran 0.1ns 100ns
+.control
+run
+plot v(2) v(3) v(4)
+.endc
+.end

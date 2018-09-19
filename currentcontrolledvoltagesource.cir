@@ -1,0 +1,12 @@
+v1 1 0 150
+r1 1 2 20
+r2 2 0 10
+h1 2 3 v1 2
+*H1 nodes of VoltageSource-VS through which current flows-scaling factor
+v2 3 0 100
+.control
+run
+print v(1)
+.endc
+.op
+.end
