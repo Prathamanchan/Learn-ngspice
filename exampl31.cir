@@ -1,0 +1,18 @@
+KCL and KVL
+V1 a 0 30V ; Voltage Source
+R1 a b 15 ; Resistor
+R2 b 0 30 ; Resistor
+R3 b c 20 ; Resistor
+R4 c 0 10 ; Resistor
+I1 0 c 1  ; Current Source
+.op ;Command for DC Analysis
+
+.control
+run
+echo **Verification of KVL**
+echo voltage around loop
+print v(a,b)+v(b,c)+v(c)
+echo source voltage
+print v(a)
+.endc
+.end ; End of the File
