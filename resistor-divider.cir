@@ -1,0 +1,7 @@
+*Simple Resistor Divider
+r1 1 0 2k
+r2 2 1 3k
+v1 2 0 dc 5v
+.dc v1 0 5 .1
+.op
+.end

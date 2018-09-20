@@ -1,0 +1,16 @@
+vdd 1 0 dc 5v
+vin 3 0 dc 0v
+
+M12 4 3 1 1 pmod w=40u l=1u
+M11 4 3 0 0 nmod w=20u l=1u
+
+
+.model nmod nmos vto=1v kp=200u
+.model pmod pmos vt0=-1v kp=80u
+
+.dc vin 0 5 0.1
+.control
+run
+plot v(4)
+.endc 
+.end

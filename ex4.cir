@@ -1,0 +1,11 @@
+v1or   1 0  {1 || 0}
+v1and  2 0  {1 && 0}
+v1not  3 0  {! 1}
+v1mod  4 0  {5 % 3}
+v1div  5 0  {5 \ 3}
+v0not  6 0  {! 0}
+.control
+op
+print allv
+.endc
+.end
