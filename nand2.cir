@@ -1,0 +1,20 @@
+Nand Circuit
+
+vdd 1 0 dc 5v
+va 3 0 pulse 0 5 1ns 1ns 1ns 10ns 20ns
+vb 4 0 pulse 0 5 1ns 1ns 1ns 10ns 20ns
+
+mp1 2 3 1 1 pmos w=4u l=1u
+mp2 2 4 1 1 pmos w=4u l=1u
+
+mn1 2 3 5 0 nmos w=2u l=1u
+mn2 5 4 0 0 nmos w=2u l=1u
+
+.inc moslh.md
+.tran 0.1ns 100ns 
+
+.control
+run
+plot v(2)+12 v(3)+6 v(4)
+.endc
+.end
