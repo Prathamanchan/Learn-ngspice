@@ -1,4 +1,4 @@
-NOR CODE
+OR CODE
 vdd 1 0 dc 5v
 va 2 0 pulse 0 5 1n 1n 1n 20u 40u
 vb 3 0 pulse 0 5 1n 1n 1n 20u 40u
