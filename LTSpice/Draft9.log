@@ -1,0 +1,23 @@
+Circuit: * C:\users\karmic\Desktop\Learn-ngspice\LTSpice\Draft9.asc
+
+Limiting rise time of source v1 to 0.025
+Limiting fall time of source v1 to 0.025
+Direct Newton iteration for .op point succeeded.
+
+Date: Thu Sep 27 14:48:13 2018
+Total elapsed time: 0.227 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 23110
+traniter = 23106
+tranpoints = 11349
+accept = 11139
+rejected = 210
+matrix size = 7
+fillins = 0
+solver = Normal
+Matrix Compiler1: 232 bytes object code size  0.6/0.6/[0.6]
+Matrix Compiler2: 453 bytes object code size  0.5/0.6/[0.6]
+

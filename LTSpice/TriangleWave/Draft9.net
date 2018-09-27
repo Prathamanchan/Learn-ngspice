@@ -1,0 +1,18 @@
+* C:\users\karmic\Desktop\Learn-ngspice\LTSpice\Draft9.asc
+I1 0 N003 0.5µ
+C1 N004 0 1µ
+R1 N002 0 10
+I2 N005 0 0.5µ
+R2 N006 0 10
+V1 N001 0 PULSE(0 5 0 0 0 0.25s 0.6s 100)
+S1 N003 N002 N001 0 PMOS1
+S2 N004 N003 N001 0 NMOS1
+S3 N005 N004 N001 0 PMOS2
+S4 N006 N005 N001 0 NMOS2
+.tran 0 10 0 0.001
+.model PMOS1 SW(Ron=.1 Roff=1Meg Vt=0 Vh=-.5)
+.model PMOS2 SW(Ron=.1 Roff=1Meg Vt=-0.5)
+.model NMOS2 SW(Ron=.1 Roff=1Meg Vt=+0.5)
+.model NMOS1 SW(Ron=.1 Roff=1Meg Vt=+0.5)
+.backanno
+.end
